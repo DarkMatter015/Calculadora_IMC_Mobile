@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Calcula IMC</string>
+    <string name="peso">Peso</string>
+    <string name="hint_peso">Digite seu peso em kg:</string>
+    <string name="altura">Altura</string>
+    <string name="hint_altura">Digite sua altura em m:</string>
+    <string name="imc">IMC</string>
+    <string name="zeros">0.00</string>
+    <string name="calcular">Calcular</string>
+    <string name="limpar">Limpar</string>
+    <string name="toast_calcular">Calcula o IMC</string>
+    <string name="toast_limpar">Campos limpos</string>
+    <string name="peso_obrigatorio">Peso é obrigatório</string>
+    <string name="altura_obrigatoria">Altura é obrigatória</string>
+    <string name="toast_calculado">IMC calculado</string>
 </resources>

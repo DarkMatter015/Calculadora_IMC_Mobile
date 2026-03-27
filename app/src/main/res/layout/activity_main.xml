@@ -10,37 +10,39 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Peso (Kg):" />
+        android:text="@string/hint_peso" />
 
     <EditText
         android:id="@+id/etPeso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Altura (cm):" />
+        android:text="@string/hint_altura" />
 
     <EditText
         android:id="@+id/etAltura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="IMC" />
+        android:text="@string/imc" />
 
     <TextView
         android:id="@+id/tvResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0.0" />
+        android:text="@string/zeros" />
 
     <LinearLayout
         style="?android:attr/buttonBarStyle"
@@ -53,14 +55,14 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calcular" />
+            android:text="@string/calcular" />
 
         <Button
             android:id="@+id/btLimpar"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Limpar" />
+            android:text="@string/limpar" />
     </LinearLayout>
 
 

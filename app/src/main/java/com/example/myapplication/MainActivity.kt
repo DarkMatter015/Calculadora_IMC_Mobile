@@ -9,6 +9,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.text.DecimalFormat
+import java.text.NumberFormat
+import java.util.Locale
 import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         btLimpar = findViewById(R.id.btLimpar)
 
         btCalcular.setOnLongClickListener {
-            Toast.makeText(this, "Calcula o IMC", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.toast_calcular, Toast.LENGTH_SHORT).show()
             true
         }
 
@@ -55,31 +58,38 @@ class MainActivity : AppCompatActivity() {
     fun limparCampos() {
         etPeso.text.clear()
         etAltura.text.clear()
-        tvResultado.text = "0.0"
+        tvResultado.text = R.string.zeros.toString()
         etPeso.requestFocus()
 
-        Toast.makeText(this, "Campos limpos", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, R.string.toast_limpar, Toast.LENGTH_SHORT).show()
     }
 
     fun calcularImc() {
 //        Entrada
         if (etPeso.text.isEmpty()) {
-            etPeso.error = "Peso é obrigatório"
+            etPeso.error = R.string.peso_obrigatorio.toString()
             return
         }
         if (etAltura.text.isEmpty()) {
-            etAltura.error = "Altura é obrigatória"
+            etAltura.error = R.string.altura_obrigatoria.toString()
             return
         }
         val peso = etPeso.text.toString().toDouble()
         val altura = etAltura.text.toString().toDouble()
-
+        var imc = 0.0
 //        Processamento
-        val imc = peso / (altura.pow(2.0))
+        if (Locale.getDefault().language == "en") {
+            imc = 703 * (peso / altura.pow(2.0))
+        } else {
+            imc = peso / (altura.pow(2.0))
+        }
+
+        val nf = NumberFormat.getInstance(Locale.getDefault())
+        val df = nf as DecimalFormat
 
 //        Saída
-        tvResultado.text = "%.2f".format(imc)
-        Toast.makeText(this, "IMC calculado", Toast.LENGTH_SHORT).show()
+        tvResultado.text = df.format(imc)
+        Toast.makeText(this, R.string.toast_calculado, Toast.LENGTH_SHORT).show()
 
     }
 }

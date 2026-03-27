@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculate BMI</string>
+
+    <string name="peso">Weight</string>
+    <string name="hint_peso">Type your weight em lb:</string>
+    <string name="altura">Height</string>
+    <string name="hint_altura">Type your height in inches:</string>
+    <string name="imc">BMI</string>
+    <string name="zeros">0.00</string>
+    <string name="calcular">Calculate</string>
+    <string name="limpar">Clear</string>
+
+    <string name="toast_calcular">Calculate the BMI</string>
+    <string name="toast_limpar">Fields cleared</string>
+    <string name="toast_calculado">BMI calculated</string>
+    <string name="peso_obrigatorio">Weight is required</string>
+    <string name="altura_obrigatoria">Height is required</string>
+</resources>
